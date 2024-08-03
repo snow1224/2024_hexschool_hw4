@@ -1,0 +1,83 @@
+.sitemap ul {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sitemap ul li a {
+  text-decoration: none;
+  margin: 12px 24px;
+}
+
+.sitemap ul li a:first-child {
+  margin-left: 0;
+}
+
+.links ul {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @include mobile {
+    margin-top: 24px;
+  }
+}
+
+.links ul li a {
+  text-decoration: none;
+  margin: 24px 16px;
+  @include mobile {
+    margin: 24px 8px;
+  }
+}
+.links ul li a img {
+  width: 32px;
+  height: 32px;
+  @include mobile {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.links ul li a img:hover{
+  box-shadow: 0px 0px 12px 3px #650300;
+}
+
+.concact_info p {
+  @include mobile {
+    display: flex;
+    padding-left: 12px;
+  }
+}
+
+.concact_info {
+  @include mobile {
+    width: 70%;
+    padding-top: 24px;
+  }
+}
+
+footer .concact_info p {
+  font-size: 36px;
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.copyright {
+  padding: 48px 0;
+}
+
+.copyright ul {
+  display: flex;
+}
+
+.copyright ul li a {
+  text-decoration: none;
+  margin: 24px 24px;
+  font-size: 14px;
+}
+
+.copyright ul li a:last-child {
+  margin-right: 16px;
+}

@@ -1,0 +1,67 @@
+.navbar-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @include pad {
+    flex-direction: column;
+    /* 移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+}
+
+.navbar-logo {
+  width: 80px;
+  transform:scale(1,1);
+  transition: 1s;
+  @include pad {
+    margin: 0 0 16px 16px;
+  }
+}
+
+.navbar-logo:hover{
+  transform:scale(1.2,1.2);
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+
+  @include pad {
+    flex-wrap: wrap;
+  }
+}
+
+.navbar-item {
+  height: 100%;
+
+  @include pad {
+    width: 50%;
+    margin-right: 0px;
+    border: 1px solid #ffffff;
+  }
+}
+
+.navbar-link {
+  height: 100%;
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 9px 32px;
+  text-decoration: none;
+
+  @include pad {
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+.navbar-link:hover {
+  opacity: 0.7;
+}
+
+.navbar-item:last-child .navbar-link {
+  padding-right: 16px;
+}

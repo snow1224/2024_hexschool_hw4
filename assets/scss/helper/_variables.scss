@@ -1,0 +1,20 @@
+/*color*/
+$primary: #AA0601;
+$secondary: #650300;
+$light: #fbf2f2;
+$white: #fff;
+$dark: #000;
+$muted: #707070;
+$light-gray: #DEE2E6;
+$gray: #00000029;
+
+
+:root{
+    --min-card-title-size: 32;
+    --max-card-title-size: 48;
+    --card-title-size: calc(
+        (var(--min-card-title-size) * 1px) + 
+        (var(--max-card-title-size) - var(--min-card-title-size)) * 
+        ((100cqw - 320px) / (1920 - 320))
+        );
+}

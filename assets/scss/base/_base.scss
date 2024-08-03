@@ -1,0 +1,117 @@
+body {
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+nav{
+  background-color: $primary;
+  padding: 16px 0;
+  
+  @include pad{
+    padding-bottom: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+footer{
+  background-color: $primary;
+}
+
+h1{
+  font-size: 64px;
+  @include mobile{
+    font-size: 24px;
+  }
+}
+
+h2{
+  font-size: 48px;
+  @include mobile{
+    font-size: 24px;
+  }
+}
+
+h3{
+  font-size: 36px;
+  @include mobile{
+    font-size: 16px;
+  }
+}
+
+h4{
+  font-size: 20px;
+  @include mobile{
+    font-size: 16px;
+  }
+}
+
+label{
+  margin-bottom: 8px;
+  display: block;
+}
+
+input, textarea{
+  background:none;
+  border: $dark 1px solid;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  &::placeholder{
+    color: $dark;
+    opacity: 0.2;
+  }
+}
+
+textarea{
+  min-height: 136px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: $light;
+    border: 2px solid $dark;
+    box-sizing: border-box;
+    margin-right: 4px;
+  }
+  /*勾選後的處理*/
+  &:checked::after{
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    color:$white;
+    background-color: $secondary;
+    border:none;
+    outline: none;
+  }
+}
+
+button{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    color: $secondary;
+  }
+}

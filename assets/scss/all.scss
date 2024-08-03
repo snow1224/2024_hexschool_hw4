@@ -1,5 +1,17 @@
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import './helper/variables'; // 變數
+@import './base/reset';  // scss import不會有url
+@import './helper/mixin';
+@import './base/base';
 
+// 1. 元件，全部頁面都會用到
+@import './component/header';
+@import './component/footer';
+@import './component/button';
 
-@import './pages/index.scss';
+// 2. 雜項(進階，第六週)
+
+// 3. 共同樣式
+@import './layout/layout';
+
+// 4. 分頁樣式
+@import './pages/index';
