@@ -13,11 +13,11 @@
   .container-sm-fluid {
     max-width: 1320px;
     margin: 0 auto;
-    @media (max-width: 768px) {
+    @include pad {
       max-width: 360px;
       /* 336+24 */
     }
-    @media (max-width: 575px) {
+    @include mobile {
       max-width: 372px;
     }
   }
@@ -27,7 +27,7 @@
   max-width: 1320px;
     margin: 0 auto;
     padding: 0 12px;
-    @media (max-width: 768px) {
+    @include pad {
       width: calc(100%);
     }
   }
@@ -38,7 +38,7 @@
   }
   
   .text-dark {
-    color: #000;
+    color: $dark;
   }
   
   .text-secondary {
@@ -50,11 +50,11 @@
   }
   
   .text-primary {
-    color: #aa0601;
+    color: $primary;
   }
   
   .text-dark-red {
-    color: #650300;
+    color: $secondary;
   }
   
   .bg-secondary {
@@ -62,15 +62,15 @@
   }
   
   .bg-joint {
-    background-image: url("../imgs/index-bg.png");
+    background-image: url("../assets/images/index-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     @include pad {
-      background-image: url("../imgs/index-bg-md.png");
+      background-image: url("../assets/images/index-bg-md.png");
     }
   
     @include mobile {
-      background-image: url("../imgs/index-bg-sm.png");
+      background-image: url("../assets/images/index-bg-sm.png");
     }
   }
   
@@ -146,11 +146,11 @@
   }
   
   .header-img {
-    background-image: url("../imgs/home-header.png");
+    background-image: url("../assets/images/home-header.png");
     background-size: cover;
     background-repeat: no-repeat;
     @include pad {
-      background-image: url("../imgs/home-header-sm.png");
+      background-image: url("../assets/images/home-header-sm.png");
     }
   }
   
@@ -187,7 +187,7 @@
   .card-title {
     font-weight: bold;
     font-size: 24px;
-    color: #650300;
+    color: $secondary;
     text-align: center;
     margin-bottom: 8px;
   }
@@ -201,17 +201,17 @@
   }
   
   .card-footer {
-    color: #707070;
+    color: $muted;
     font-size: 14px;
   }
   
   .card-shadow {
-    border: #dee2e6 1px solid;
-    box-shadow: 0 2px 6px #00000029;
+    border: $light-gray 1px solid;
+    box-shadow: 0 2px 6px $gray;
   }
   
   .img-card {
-    color: #aa0601;
+    color: $primary;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -294,6 +294,52 @@
       width: 100%;
     }
   }
+
+  /*格線系統*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col{
+  flex: 1 0 0%;
+}
+
+/* 一個元素佔 3 欄，格線系統總共是 12 欄， 12 / 3 可分成 4 等份 */
+.col-3{
+	/* 100% / 4 */
+  width: 25%;
+  padding-left: 12px;
+  padding-right: 12px;
+  @include pad{
+    width: 50%;
+  }
+  @include mobile{
+    width: 100%;
+  }
+}
+
+.col-4{
+	/* 100% / 4 */
+  width: 33.33%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@include pad {
+  .col-md-6{
+    width: 50%;
+  }
+  .col-md-12{
+    width: 100%;
+  }
+}
+
+@include mobile{
+  .col-sm-12{
+    width: 100%;
+  }
+}
   
   .ml-auto {
     margin-left: auto;

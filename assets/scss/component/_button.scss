@@ -6,15 +6,15 @@
   
   .btn-primary,
   .btn-outline-primary {
-    background-color: #aa0601;
-    border: #aa0601 solid 1px;
+    background-color: $primary;
+    border: $primary solid 1px;
   }
   
   .btn-primary:hover {
-    background-color: #650300;
+    background-color: $secondary;
   }
   
   .btn-outline-primary:hover {
-    background-color: white;
-    color: #aa0601;
+    background-color: $white;
+    color: $primary;
   }

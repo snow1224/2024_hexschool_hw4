@@ -66,18 +66,14 @@ footer .concact_info p {
 
 .copyright {
   padding: 48px 0;
-}
-
-.copyright ul {
-  display: flex;
-}
-
-.copyright ul li a {
-  text-decoration: none;
-  margin: 24px 24px;
-  font-size: 14px;
-}
-
-.copyright ul li a:last-child {
-  margin-right: 16px;
+  ul{
+    display: flex;
+  }
+  ul li{
+    margin: 24px 24px;
+    font-size: 14px;
+    &:last-child{
+      margin-right: 16px;
+    }
+  }
 }

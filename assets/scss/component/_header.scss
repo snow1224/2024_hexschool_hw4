@@ -18,10 +18,9 @@
   @include pad {
     margin: 0 0 16px 16px;
   }
-}
-
-.navbar-logo:hover{
-  transform:scale(1.2,1.2);
+  &:hover{
+    transform:scale(1.2,1.2);
+  }
 }
 
 .navbar-nav {
@@ -39,7 +38,7 @@
   @include pad {
     width: 50%;
     margin-right: 0px;
-    border: 1px solid #ffffff;
+    border: 1px solid $white;
   }
 }
 
@@ -47,19 +46,18 @@
   height: 100%;
   display: block;
   font-size: 20px;
-  color: #ffffff;
+  color: $white;
   padding: 9px 32px;
   text-decoration: none;
+  &:hover{
+    opacity: 0.7;
+  }
 
   @include pad {
     font-size: 16px;
     text-align: center;
     padding: 12px 0;
   }
-}
-
-.navbar-link:hover {
-  opacity: 0.7;
 }
 
 .navbar-item:last-child .navbar-link {
