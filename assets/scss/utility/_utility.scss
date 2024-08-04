@@ -1,0 +1,9 @@
+.border-x{
+    border-left: solid 1px $dark;
+    border-right: solid 1px $dark;
+}
+
+.border-x-gray{
+    border-left-color: $gray-second;
+    border-right-color: $gray-second;
+}

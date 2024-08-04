@@ -8,11 +8,15 @@
 @import './component/footer';
 @import './component/button';
 @import './component/card';
+@import './component/list';
+@import './component/pager';
 
 // 2. 雜項(進階，第六週)
+@import './utility/utility';
 
 // 3. 共同樣式
 @import './layout/layout';
 
 // 4. 分頁樣式
 @import './pages/index';
+@import './pages/product';

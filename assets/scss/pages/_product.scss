@@ -1,0 +1,39 @@
+.product-h1{
+    font-size: 42px !important;
+    font-weight: 500 !important;
+    @include mobile{
+        font-size: 24px !important;
+    }
+}
+
+.product-h2{
+    font-size: 32px !important;
+    @include mobile{
+        font-size: 24px !important;
+    }
+}
+
+.box{
+    border-radius: 4px;
+    background-color: $brown;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $brown;
+    cursor: pointer;
+}
+
+.box-light{
+    background-color: $brown-light;
+    border-color: $brown-light;
+}
+
+
+.product-mb{
+    margin-bottom: 80px;
+    @include pad{
+        margin-bottom: 40px;
+    }
+    @include mobile{
+        margin-bottom: 24px;
+    }
+}

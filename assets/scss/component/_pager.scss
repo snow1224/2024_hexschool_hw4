@@ -1,0 +1,25 @@
+.page{
+    display: flex;
+    justify-content: center;
+    &-item{
+        font-size: 18px;
+        &-link{
+            border: solid 1px $page-border;
+            padding: 10px 14px;
+            color: $dark;
+            &:hover{
+                background-color: $page-hover;
+            }
+            &-active, &:active{
+                background-color: $page-active;
+                color: $white;
+            }
+            @include mobile{
+                padding: 10px 12px;
+            }
+        }
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+}
