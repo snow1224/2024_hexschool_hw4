@@ -9,11 +9,11 @@
 }
 
 .header-img {
-  background-image: url("./../assets/images/home-header.png");
+  background-image: url("/assets/images/home-header.png");
   background-size: cover;
   background-repeat: no-repeat;
   @include pad {
-    background-image: url("./../assets/images/home-header-sm.png");
+    background-image: url("/assets/images/home-header-sm.png");
   }
 }
 
@@ -24,14 +24,14 @@
 }
 
 .bg-joint {
-  background-image: url("./../assets/images/index-bg.png");
+  background-image: url("/assets/images/index-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   @include pad {
-    background-image: url("./../assets/images/index-bg-md.png");
+    background-image: url("/assets/images/index-bg-md.png");
   }
 
   @include mobile {
-    background-image: url("../assets/images/index-bg-sm.png");
+    background-image: url("/assets/images/index-bg-sm.png");
   }
 }
