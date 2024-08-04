@@ -41,12 +41,12 @@
     color: $dark;
   }
   
-  .text-secondary {
-    color: #fbf2f2;
+  .text-light{
+    color: $light;
   }
   
   .text-white {
-    color: white;
+    color: $white;
   }
   
   .text-primary {
@@ -57,25 +57,12 @@
     color: $secondary;
   }
   
-  .bg-secondary {
-    background-color: #fbf2f2;
-  }
-  
-  .bg-joint {
-    background-image: url("../assets/images/index-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    @include pad {
-      background-image: url("../assets/images/index-bg-md.png");
-    }
-  
-    @include mobile {
-      background-image: url("../assets/images/index-bg-sm.png");
-    }
+  .bg-light {
+    background-color: $light;
   }
   
   .bg-white {
-    background-color: #fff;
+    background-color: $white;
   }
   
   .text-start {
@@ -139,119 +126,6 @@
     align-items: center !important;
   }
   
-  @include mobile {
-    .copyright ul {
-      display: block;
-    }
-  }
-  
-  .header-img {
-    background-image: url("../assets/images/home-header.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    @include pad {
-      background-image: url("../assets/images/home-header-sm.png");
-    }
-  }
-  
-  .card {
-    /*卡片圖片置中寫法1*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*寫法1*/
-  
-    margin-right: 24px;
-  }
-  .card:nth-child(4) {
-    margin-right: 0;
-  }
-  @include pad {
-    .card-section {
-      padding: 0 12px;
-    }
-  }
-  @include mobile {
-    .card {
-      margin-right: 0;
-    }
-  }
-  .card img {
-    width: 25.6%;
-    /* margin: auto; */ /*寫法2*/
-    display: block;
-    margin-bottom: 24px;
-  }
-  
-  .card-title {
-    font-weight: bold;
-    font-size: 24px;
-    color: $secondary;
-    text-align: center;
-    margin-bottom: 8px;
-  }
-  
-  .card-content {
-    margin-bottom: 24px;
-  }
-  
-  .card-name {
-    font-weight: 500;
-  }
-  
-  .card-footer {
-    color: $muted;
-    font-size: 14px;
-  }
-  
-  .card-shadow {
-    border: $light-gray 1px solid;
-    box-shadow: 0 2px 6px $gray;
-  }
-  
-  .img-card {
-    color: $primary;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .img-card img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center center;
-    height: auto/ 100%;
-    padding: 0 12px;
-    @include pad {
-      padding: 0 0;
-    }
-  }
-  
-  .img-card-title {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
-  .joint-container {
-    margin: 0 12px;
-    @include pad {
-      margin: 0 36px;
-    }
-    @include mobile {
-      margin: 0 14px;
-    }
-  }
-  
-  .joint-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
   .w-50 {
     width: 50%;
   }
@@ -299,6 +173,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  padding: 12px 0;
 }
 
 .col{

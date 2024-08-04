@@ -1,3 +1,37 @@
-.index-title {
-  font-size: 100px;
+.joint-container {
+  margin: 0 12px;
+  @include pad {
+    margin: 0 36px;
+  }
+  @include mobile {
+    margin: 0 14px;
+  }
+}
+
+.header-img {
+  background-image: url("../assets/images/home-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include pad {
+    background-image: url("../assets/images/home-header-sm.png");
+  }
+}
+
+.joint-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg-joint {
+  background-image: url("../assets/images/index-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include pad {
+    background-image: url("../assets/images/index-bg-md.png");
+  }
+
+  @include mobile {
+    background-image: url("../assets/images/index-bg-sm.png");
+  }
 }

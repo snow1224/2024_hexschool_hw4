@@ -1,16 +1,15 @@
 .sitemap ul {
   padding-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.sitemap ul li a {
-  text-decoration: none;
-  margin: 12px 24px;
-}
-
-.sitemap ul li a:first-child {
-  margin-left: 0;
+  li a {
+    text-decoration: none;
+    margin: 12px 24px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
 
 .links ul {
@@ -21,39 +20,37 @@
   @include mobile {
     margin-top: 24px;
   }
-}
-
-.links ul li a {
-  text-decoration: none;
-  margin: 24px 16px;
-  @include mobile {
-    margin: 24px 8px;
-  }
-}
-.links ul li a img {
-  width: 32px;
-  height: 32px;
-  @include mobile {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-.links ul li a img:hover{
-  box-shadow: 0px 0px 12px 3px #650300;
-}
-
-.concact_info p {
-  @include mobile {
-    display: flex;
-    padding-left: 12px;
+  li a {
+    text-decoration: none;
+    margin: 24px 16px;
+    @include mobile {
+      margin: 24px 8px;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+      @include mobile {
+        width: 24px;
+        height: 24px;
+      }
+      &:hover{
+        box-shadow: 0px 0px 12px 3px $secondary;
+      }
+    }
   }
 }
 
 .concact_info {
   @include mobile {
-    width: 70%;
+    min-width: 70%;
+    max-width: 100%;
     padding-top: 24px;
+  }
+  p {
+    @include mobile {
+      display: flex;
+      padding-left: 12px;
+    }
   }
 }
 
@@ -68,12 +65,18 @@ footer .concact_info p {
   padding: 48px 0;
   ul{
     display: flex;
-  }
-  ul li{
-    margin: 24px 24px;
-    font-size: 14px;
-    &:last-child{
-      margin-right: 16px;
+    li{
+      margin: 24px 24px;
+      font-size: 14px;
+      &:last-child{
+        margin-right: 16px;
+      }
     }
+  }
+}
+
+@include mobile {
+  .copyright ul {
+    display: block;
   }
 }

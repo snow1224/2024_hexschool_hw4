@@ -1,0 +1,81 @@
+.card {
+    /*卡片圖片置中寫法1*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*寫法1*/
+  
+    // margin-right: 24px;
+  }
+  .card:nth-child(4) {
+    margin-right: 0;
+  }
+  @include pad {
+    .card-section {
+      padding: 0 12px;
+    }
+  }
+  @include mobile {
+    .card {
+      margin-right: 0;
+    }
+  }
+  .card img {
+    width: 25.6%;
+    /* margin: auto; */ /*寫法2*/
+    display: block;
+    margin-bottom: 24px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: $secondary;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .card-content {
+    margin-bottom: 24px;
+  }
+  
+  .card-name {
+    font-weight: 500;
+  }
+  
+  .card-footer {
+    color: $muted;
+    font-size: 14px;
+  }
+  
+  .card-shadow {
+    border: $light-gray 1px solid;
+    box-shadow: 0 2px 6px $gray;
+  }
+  
+  .img-card {
+    color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center center;
+    height: auto/ 100%;
+    padding: 0 12px;
+    @include pad {
+      padding: 0 0;
+    }
+  }
+  
+  .img-card-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+  }
