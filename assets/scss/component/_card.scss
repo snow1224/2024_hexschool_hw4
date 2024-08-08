@@ -74,7 +74,7 @@
   
   .img-card-title {
     text-align: center;
-    font-size: 48px;
+    font-size: clamp(var(--min-card-title-size) * 1px, var(--card-title-size), var(--max-card-title-size) * 1px);
     font-weight: 900;
     font-style: italic;
   }
